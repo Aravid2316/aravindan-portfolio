@@ -5,18 +5,18 @@ import { motion, useInView } from 'framer-motion';
 import { Code2, Smartphone, Users, Zap } from 'lucide-react';
 
 const stats = [
-  { value: '4+', label: 'Years Experience', icon: Code2, color: 'from-indigo-500 to-purple-500' },
-  { value: '2', label: 'Production Apps', icon: Smartphone, color: 'from-purple-500 to-pink-500' },
-  { value: '∞', label: 'Components Built', icon: Zap, color: 'from-cyan-500 to-blue-500' },
-  { value: '100%', label: 'Team Collaboration', icon: Users, color: 'from-emerald-500 to-teal-500' },
+  { value: '4+', label: 'Years Experience', icon: Code2, color: 'from-[#14B8A6] to-[#2DD4BF]' },
+  { value: '2', label: 'Production Apps', icon: Smartphone, color: 'from-[#2DD4BF] to-[#67E8F9]' },
+  { value: '∞', label: 'Components Built', icon: Zap, color: 'from-[#67E8F9] to-[#14B8A6]' },
+  { value: '100%', label: 'Team Collaboration', icon: Users, color: 'from-[#14B8A6] to-[#67E8F9]' },
 ];
 
 const highlights = [
-  { text: 'React.js & Next.js', color: 'text-indigo-300' },
-  { text: 'TypeScript', color: 'text-purple-300' },
-  { text: 'React Native', color: 'text-cyan-300' },
-  { text: 'Tailwind CSS', color: 'text-emerald-300' },
-  { text: 'Strapi CMS', color: 'text-pink-300' },
+  { text: 'React.js & Next.js', color: 'text-[#2DD4BF]' },
+  { text: 'TypeScript', color: 'text-[#67E8F9]' },
+  { text: 'React Native', color: 'text-[#2DD4BF]' },
+  { text: 'Tailwind CSS', color: 'text-[#14B8A6]' },
+  { text: 'Strapi CMS', color: 'text-[#67E8F9]' },
 ];
 
 export default function About() {
@@ -24,11 +24,11 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="about" className="section-padding bg-[#040d1a] relative overflow-hidden">
+    <section id="about" className="section-padding bg-[#0F172A] relative overflow-hidden">
       {/* Background accent */}
       <div
         aria-hidden="true"
-        className="orb w-[500px] h-[500px] bg-indigo-600/8 -right-32 top-0 pointer-events-none"
+        className="orb w-[500px] h-[500px] bg-[#14B8A6]/8 -right-32 top-0 pointer-events-none"
       />
 
       <div className="container-xl" ref={ref}>
@@ -37,7 +37,7 @@ export default function About() {
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <div className="section-label mb-4 mx-auto inline-flex">About Me</div>
           <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
@@ -45,36 +45,51 @@ export default function About() {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left — Story */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="space-y-6"
+            className="space-y-6 text-center lg:text-left w-full max-w-3xl mx-auto lg:mx-0"
           >
             {/* Decorative line */}
-            <div className="flex items-center gap-4">
-              <div className="h-px flex-1 bg-gradient-to-r from-indigo-500/60 to-transparent" />
-              <span className="text-xs font-semibold text-indigo-400 tracking-widest uppercase">
+            <div className="flex items-center justify-center lg:justify-start gap-4">
+              <div className="h-px flex-1 bg-gradient-to-r from-[#14B8A6]/60 to-transparent" />
+              <span className="text-xs font-semibold text-[#67E8F9] tracking-widest uppercase">
                 Who I Am
               </span>
             </div>
 
             <p className="text-lg text-slate-300 leading-relaxed">
               I&apos;m a <span className="text-white font-semibold">Frontend Developer</span> with{' '}
-              <span className="text-indigo-300 font-semibold">4 years</span> of professional
-              experience building scalable web and mobile applications that users love.
+              <span className="text-[#67E8F9] font-semibold">4 years of experience</span>{' '}
+              building high-performance web and mobile applications used by thousands of users.
             </p>
             <p className="text-slate-400 leading-relaxed">
-              I&apos;ve worked on large-scale production applications in the{' '}
-              <span className="text-white font-medium">travel industry</span>, building reusable
-              component systems, integrating REST APIs, optimizing performance, and collaborating
-              with cross-functional teams — designers, QA, backend engineers, and product managers.
+              I specialize in creating scalable, maintainable, and user-centric digital experiences
+              using modern frontend technologies.
             </p>
             <p className="text-slate-400 leading-relaxed">
-              My focus is always on writing clean, maintainable code that performs well and
-              delivers exceptional user experiences across both web and mobile platforms.
+              Throughout my career, I&apos;ve contributed to large-scale production applications in
+              the travel technology domain, developing reusable component architectures, integrating
+              REST APIs, optimizing application performance, and delivering seamless user
+              experiences across web and mobile platforms.
+            </p>
+            <p className="text-slate-400 leading-relaxed">
+              I work closely with designers, product managers, QA engineers, and backend teams to
+              transform complex business requirements into intuitive, reliable, and accessible
+              products.
+            </p>
+            <p className="text-slate-400 leading-relaxed">
+              My experience spans both customer-facing applications and internal systems, with a
+              strong focus on code quality, scalability, and long-term maintainability.
+            </p>
+            <p className="text-slate-400 leading-relaxed">
+              My core expertise includes React.js, Next.js, TypeScript, React Native, Tailwind CSS,
+              and modern frontend development practices. I&apos;m passionate about building
+              products that not only look great but also deliver measurable business value and
+              exceptional user experiences.
             </p>
 
             {/* Tech stack pills */}
@@ -95,9 +110,9 @@ export default function About() {
             </div>
 
             {/* CTA */}
-            <div className="pt-2">
-              <a href="#contact" id="about-contact-cta" className="btn-primary inline-flex">
-                Let&apos;s Work Together
+            <div className="pt-2 flex justify-center lg:justify-start">
+              <a href="#contact" id="about-contact-cta" className="btn-primary inline-flex justify-center">
+                Let&apos;s Build Something Great
               </a>
             </div>
           </motion.div>
@@ -107,7 +122,7 @@ export default function About() {
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
           >
             {stats.map((stat, i) => (
               <motion.div

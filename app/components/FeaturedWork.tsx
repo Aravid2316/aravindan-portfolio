@@ -14,8 +14,8 @@ const projects = [
     image: '/pyt-web.png',
     imageAlt: 'Pickyourtrail web platform interface',
     icon: Globe,
-    gradient: 'from-indigo-500 via-purple-500 to-cyan-500',
-    accentColor: 'indigo',
+    gradient: 'from-[#14B8A6] via-[#2DD4BF] to-[#67E8F9]',
+    accentColor: 'teal',
     overview:
       'A large-scale travel platform enabling users to discover, customize, and book complete travel experiences — from flights and hotels to curated holiday packages across 50+ destinations worldwide.',
     contributions: [
@@ -36,8 +36,8 @@ const projects = [
     image: '/pyt-mobile.png',
     imageAlt: 'Pickyourtrail mobile application',
     icon: Smartphone,
-    gradient: 'from-purple-500 via-pink-500 to-indigo-500',
-    accentColor: 'purple',
+    gradient: 'from-[#2DD4BF] via-[#67E8F9] to-[#14B8A6]',
+    accentColor: 'cyan',
     overview:
       'A cross-platform mobile application for iOS and Android, empowering travelers to plan, manage, and book their trips seamlessly. Built with React Native for a native-like experience.',
     contributions: [
@@ -57,11 +57,11 @@ export default function FeaturedWork() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="work" className="section-padding relative overflow-hidden" style={{ background: '#060f20' }}>
+    <section id="projects" className="section-padding relative overflow-hidden" style={{ background: '#0F172A' }}>
       {/* Background */}
       <div
         aria-hidden="true"
-        className="orb w-[500px] h-[500px] bg-indigo-600/8 left-1/2 -translate-x-1/2 -top-20 pointer-events-none"
+        className="orb w-[500px] h-[500px] bg-[#14B8A6]/8 left-1/2 -translate-x-1/2 -top-20 pointer-events-none"
       />
 
       <div className="container-xl" ref={ref}>
@@ -70,11 +70,11 @@ export default function FeaturedWork() {
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <div className="section-label mb-4 mx-auto inline-flex">Case Studies</div>
           <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
-            Featured <span className="gradient-text">Work</span>
+            Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-slate-400 mt-4 max-w-lg mx-auto">
             Production applications I&apos;ve contributed to, used by real travelers every day.
@@ -105,7 +105,7 @@ export default function FeaturedWork() {
                 <div
                   className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-30`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#060f20] via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-transparent" />
 
                 {/* Project type badge */}
                 <div className="absolute top-4 left-4">
@@ -151,7 +151,7 @@ export default function FeaturedWork() {
                           key={i}
                           className="flex items-start gap-3 text-sm text-slate-300 leading-relaxed"
                         >
-                          <ChevronRight size={13} className="text-indigo-400 flex-shrink-0 mt-0.5" />
+                          <ChevronRight size={13} className="text-[#2DD4BF] flex-shrink-0 mt-0.5" />
                           {contrib}
                         </li>
                       ))}

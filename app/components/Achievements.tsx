@@ -13,72 +13,72 @@ const achievements = [
     value: '4+',
     title: 'Years of Professional Experience',
     description: 'Consistently delivering production-grade applications since 2021.',
-    gradient: 'from-indigo-500 to-purple-600',
-    glow: 'rgba(99,102,241,0.25)',
+    gradient: 'from-[#14B8A6] to-[#2DD4BF]',
+    glow: 'rgba(20,184,166,0.25)',
   },
   {
     icon: Laptop,
     value: '1',
     title: 'Production Web Application',
     description: 'Contributed to a large-scale travel platform used by thousands daily.',
-    gradient: 'from-blue-500 to-cyan-500',
-    glow: 'rgba(59,130,246,0.25)',
+    gradient: 'from-[#2DD4BF] to-[#67E8F9]',
+    glow: 'rgba(45,212,191,0.25)',
   },
   {
     icon: Smartphone,
     value: '1',
     title: 'Production Mobile Application',
     description: 'Built and shipped features on a cross-platform React Native app.',
-    gradient: 'from-purple-500 to-pink-500',
-    glow: 'rgba(168,85,247,0.25)',
+    gradient: 'from-[#2DD4BF] to-[#67E8F9]',
+    glow: 'rgba(45,212,191,0.25)',
   },
   {
     icon: Code2,
     value: '2',
     title: 'React & Next.js Expertise',
     description: 'Deep expertise in React ecosystem — hooks, SSR, SSG, and performance.',
-    gradient: 'from-cyan-500 to-blue-500',
-    glow: 'rgba(6,182,212,0.25)',
+    gradient: 'from-[#67E8F9] to-[#14B8A6]',
+    glow: 'rgba(103,232,249,0.25)',
   },
   {
     icon: GitBranch,
     value: '∞',
     title: 'React Native Experience',
     description: 'Built native iOS & Android features with smooth UX and performance.',
-    gradient: 'from-fuchsia-500 to-purple-500',
-    glow: 'rgba(217,70,239,0.25)',
+    gradient: 'from-[#2DD4BF] to-[#67E8F9]',
+    glow: 'rgba(45,212,191,0.25)',
   },
   {
     icon: Database,
     value: 'CMS',
     title: 'CMS Integration Experience',
     description: 'Integrated Strapi CMS for content-driven pages and dynamic routing.',
-    gradient: 'from-violet-500 to-indigo-500',
-    glow: 'rgba(139,92,246,0.25)',
+    gradient: 'from-[#14B8A6] to-[#2DD4BF]',
+    glow: 'rgba(20,184,166,0.25)',
   },
   {
     icon: Layers,
     value: '100+',
     title: 'Reusable Component Architecture',
     description: 'Built and maintained design-system-level component libraries.',
-    gradient: 'from-emerald-500 to-teal-500',
-    glow: 'rgba(16,185,129,0.25)',
+    gradient: 'from-[#14B8A6] to-[#2DD4BF]',
+    glow: 'rgba(20,184,166,0.25)',
   },
   {
     icon: Zap,
     value: 'LCP',
     title: 'Performance Optimization',
     description: 'Improved Core Web Vitals, bundle sizes, and rendering performance.',
-    gradient: 'from-amber-500 to-orange-500',
-    glow: 'rgba(245,158,11,0.25)',
+    gradient: 'from-[#2DD4BF] to-[#67E8F9]',
+    glow: 'rgba(45,212,191,0.25)',
   },
   {
     icon: Users,
     value: '✓',
     title: 'Cross-Functional Collaboration',
     description: 'Worked with designers, QA, backend engineers, and product managers.',
-    gradient: 'from-rose-500 to-pink-500',
-    glow: 'rgba(244,63,94,0.25)',
+    gradient: 'from-[#14B8A6] to-[#2DD4BF]',
+    glow: 'rgba(20,184,166,0.25)',
   },
 ];
 
@@ -87,11 +87,11 @@ export default function Achievements() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="achievements" className="section-padding bg-[#040d1a] relative overflow-hidden">
+    <section id="achievements" className="section-padding bg-[#0F172A] relative overflow-hidden">
       {/* Background */}
       <div
         aria-hidden="true"
-        className="orb w-[500px] h-[500px] bg-purple-600/8 left-1/4 top-1/2 -translate-y-1/2 pointer-events-none"
+        className="orb w-[500px] h-[500px] bg-[#14B8A6]/10 left-1/4 top-1/2 -translate-y-1/2 pointer-events-none"
       />
 
       <div className="container-xl" ref={ref}>
@@ -100,7 +100,7 @@ export default function Achievements() {
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <div className="section-label mb-4 mx-auto inline-flex">Milestones</div>
           <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">

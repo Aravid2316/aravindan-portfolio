@@ -14,16 +14,16 @@ export default function Contact() {
     <section
       id="contact"
       className="section-padding relative overflow-hidden"
-      style={{ background: '#060f20' }}
+      style={{ background: '#0F172A' }}
     >
       {/* Background */}
       <div
         aria-hidden="true"
-        className="orb w-[500px] h-[500px] bg-indigo-600/10 right-0 top-0 pointer-events-none"
+        className="orb w-[500px] h-[500px] bg-[#14B8A6]/10 right-0 top-0 pointer-events-none"
       />
       <div
         aria-hidden="true"
-        className="orb w-[400px] h-[400px] bg-purple-600/8 -left-20 bottom-0 pointer-events-none"
+        className="orb w-[400px] h-[400px] bg-[#2DD4BF]/8 -left-20 bottom-0 pointer-events-none"
       />
 
       <div className="container-xl" ref={ref}>
@@ -32,7 +32,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <div className="section-label mb-4 mx-auto inline-flex">Get In Touch</div>
           <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
@@ -40,7 +40,7 @@ export default function Contact() {
             <span className="gradient-text">Great Together</span>
           </h2>
           <p className="text-slate-400 mt-4 max-w-lg mx-auto">
-            Open to frontend engineering opportunities, exciting projects, and meaningful collaborations.
+            Open to frontend engineering opportunities, innovative projects, and meaningful collaborations.
           </p>
         </motion.div>
 
@@ -85,8 +85,7 @@ export default function Contact() {
             </div>
 
             <p className="text-slate-400 mt-8 leading-relaxed">
-              I'm open to discussing frontend development opportunities,
-              collaborations, and exciting projects.
+              I'm always interested in discussing frontend engineering opportunities, innovative products, and meaningful collaborations.
             </p>
           </div>
         </motion.div>
