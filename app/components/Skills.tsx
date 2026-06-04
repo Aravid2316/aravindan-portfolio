@@ -21,6 +21,7 @@ const skills = [
   // State
   { name: 'Jotai', category: 'State', level: 85, color: '#6366f1', icon: '⚡' },
   { name: 'Context API', category: 'State', level: 90, color: '#a855f7', icon: '🔗' },
+  { name: 'Redux', category: 'State', level: 88, color: '#764ABC', icon: '🔁' },
   // CMS
   { name: 'Strapi CMS', category: 'CMS', level: 83, color: '#8C4BFF', icon: '📦' },
   // Tools
@@ -31,12 +32,12 @@ const skills = [
 ];
 
 const categoryColors: Record<Category, string> = {
-  All: 'from-indigo-500 to-purple-500',
-  Frontend: 'from-blue-500 to-cyan-400',
-  Mobile: 'from-purple-500 to-pink-500',
-  State: 'from-violet-500 to-indigo-500',
-  CMS: 'from-fuchsia-500 to-purple-600',
-  Tools: 'from-orange-500 to-amber-400',
+  All: 'from-[#14B8A6] to-[#2DD4BF]',
+  Frontend: 'from-[#14B8A6] to-[#2DD4BF]',
+  Mobile: 'from-[#2DD4BF] to-[#67E8F9]',
+  State: 'from-[#67E8F9] to-[#14B8A6]',
+  CMS: 'from-[#14B8A6] to-[#2DD4BF]',
+  Tools: 'from-[#2DD4BF] to-[#67E8F9]',
 };
 
 export default function Skills() {
@@ -47,11 +48,11 @@ export default function Skills() {
   const filtered = active === 'All' ? skills : skills.filter((s) => s.category === active);
 
   return (
-    <section id="skills" className="section-padding relative overflow-hidden" style={{ background: '#060f20' }}>
+    <section id="skills" className="section-padding relative overflow-hidden" style={{ background: '#0F172A' }}>
       {/* Background */}
       <div
         aria-hidden="true"
-        className="orb w-[400px] h-[400px] bg-purple-600/10 -left-20 top-1/4 pointer-events-none"
+        className="orb w-[400px] h-[400px] bg-[#2DD4BF]/10 -left-20 top-1/4 pointer-events-none"
       />
 
       <div className="container-xl" ref={ref}>
@@ -89,7 +90,7 @@ export default function Skills() {
               onClick={() => setActive(cat)}
               className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                 active === cat
-                  ? `bg-gradient-to-r ${categoryColors[cat]} text-white shadow-lg shadow-indigo-500/25`
+                  ? `bg-gradient-to-r ${categoryColors[cat]} text-white shadow-lg shadow-[#14B8A6]/25`
                   : 'glass text-slate-400 hover:text-white hover:bg-white/5'
               }`}
             >
@@ -145,7 +146,7 @@ export default function Skills() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto"
+          className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto"
         >
           {[
             { label: 'Languages & Frameworks', value: '7+' },

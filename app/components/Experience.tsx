@@ -26,11 +26,11 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="experience" className="section-padding bg-[#040d1a] relative overflow-hidden">
+    <section id="experience" className="section-padding bg-[#0F172A] relative overflow-hidden">
       {/* Background */}
       <div
         aria-hidden="true"
-        className="orb w-[400px] h-[400px] bg-cyan-600/8 -right-20 bottom-0 pointer-events-none"
+        className="orb w-[400px] h-[400px] bg-[#67E8F9]/8 -right-20 bottom-0 pointer-events-none"
       />
 
       <div className="container-xl" ref={ref}>
@@ -39,7 +39,7 @@ export default function Experience() {
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <div className="section-label mb-4 mx-auto inline-flex">Professional Journey</div>
           <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
@@ -63,9 +63,9 @@ export default function Experience() {
               initial={{ opacity: 0, scale: 0 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.4, delay: 0.4 }}
-              className="absolute left-0 top-6 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg shadow-indigo-500/50 -translate-x-1/2"
+              className="absolute left-0 top-6 w-4 h-4 rounded-full bg-gradient-to-br from-[#14B8A6] to-[#2DD4BF] shadow-lg shadow-[#14B8A6]/50 -translate-x-1/2"
             >
-              <div className="absolute inset-0 rounded-full bg-indigo-400/30 animate-ping" />
+              <div className="absolute inset-0 rounded-full bg-[#14B8A6]/30 animate-ping" />
             </motion.div>
 
             {/* Experience Card */}
@@ -78,12 +78,12 @@ export default function Experience() {
               {/* Header */}
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/30 flex-shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#14B8A6] to-[#2DD4BF] flex items-center justify-center shadow-lg shadow-[#14B8A6]/30 flex-shrink-0">
                     <Briefcase size={20} className="text-white" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white">Frontend Developer</h3>
-                    <p className="text-indigo-300 font-semibold mt-0.5">Pickyourtrail</p>
+                    <p className="text-[#2DD4BF] font-semibold mt-0.5">Pickyourtrail</p>
                   </div>
                 </div>
                 <div className="flex flex-col items-start sm:items-end gap-2">
@@ -95,7 +95,7 @@ export default function Experience() {
                     <MapPin size={13} />
                     <span>Chennai, India</span>
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+                  <span className="px-3 py-1 rounded-full bg-[#14B8A6]/15 border border-[#14B8A6]/30 text-[#2DD4BF] text-xs font-semibold">
                     Full-Time
                   </span>
                 </div>
@@ -117,7 +117,7 @@ export default function Experience() {
                     >
                       <ChevronRight
                         size={14}
-                        className="text-indigo-400 flex-shrink-0 mt-0.5"
+                        className="text-[#2DD4BF] flex-shrink-0 mt-0.5"
                       />
                       {resp}
                     </motion.li>

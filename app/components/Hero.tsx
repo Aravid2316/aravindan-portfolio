@@ -44,24 +44,24 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-start pt-18 pb-16 bg-[#040d1a]"
+      className="relative min-h-screen flex flex-col items-center justify-start pt-12 sm:pt-14 pb-12 bg-[#0F172A]"
     >
       {/* Background Orbs */}
       <div aria-hidden="true" className="pointer-events-none">
         <motion.div
           animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.6, 0.4] }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-          className="orb w-[600px] h-[600px] bg-indigo-600/20 -top-40 -left-32"
+          className="orb w-[600px] h-[600px] bg-[#14B8A6]/20 -top-40 -left-32"
         />
         <motion.div
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
           transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
-          className="orb w-[500px] h-[500px] bg-purple-600/20 top-20 -right-32"
+          className="orb w-[500px] h-[500px] bg-[#2DD4BF]/20 top-20 -right-32"
         />
         <motion.div
           animate={{ scale: [1, 1.1, 1], opacity: [0.2, 0.4, 0.2] }}
           transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
-          className="orb w-[400px] h-[400px] bg-cyan-500/15 bottom-10 left-1/4"
+          className="orb w-[400px] h-[400px] bg-[#67E8F9]/15 bottom-10 left-1/4"
         />
 
         {/* Grid overlay */}
@@ -74,11 +74,11 @@ export default function Hero() {
           }}
         />
         {/* Gradient fade at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#040d1a] to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0F172A] to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="container-xl relative z-10 pt-24 pb-16">
+      <div className="container-xl relative z-10 pt-16 pb-10">
         <motion.div
           variants={container}
           initial="hidden"
@@ -89,7 +89,7 @@ export default function Hero() {
           <motion.div variants={item} className="flex justify-center mb-8">
             <div className="section-label">
               <Sparkles size={12} />
-              Available for new opportunities
+              Let&apos;s Create Exceptional Experiences
             </div>
           </motion.div>
 
@@ -104,11 +104,11 @@ export default function Hero() {
 
           {/* Role */}
           <motion.div variants={item} className="flex items-center justify-center gap-3 mb-6">
-            <div className="h-px w-12 bg-gradient-to-r from-transparent to-indigo-400" />
-            <p className="text-xl sm:text-2xl font-semibold text-indigo-300 tracking-wide">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#2DD4BF]" />
+            <p className="text-xl sm:text-2xl font-semibold text-[#2DD4BF] tracking-wide">
               Frontend Developer
             </p>
-            <div className="h-px w-12 bg-gradient-to-l from-transparent to-indigo-400" />
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#2DD4BF]" />
           </motion.div>
 
           {/* Tagline */}
@@ -117,10 +117,10 @@ export default function Hero() {
             className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed mb-4"
           >
             Building scalable web and mobile experiences with{' '}
-            <span className="text-indigo-300 font-medium">React</span>,{' '}
-            <span className="text-purple-300 font-medium">Next.js</span>,{' '}
-            <span className="text-cyan-300 font-medium">TypeScript</span>, and{' '}
-            <span className="text-indigo-300 font-medium">React Native</span>.
+            <span className="text-[#2DD4BF] font-medium">React</span>,{' '}
+            <span className="text-[#67E8F9] font-medium">Next.js</span>,{' '}
+            <span className="text-[#2DD4BF] font-medium">TypeScript</span>, and{' '}
+            <span className="text-[#67E8F9] font-medium">React Native</span>.
           </motion.p>
 
           <motion.p
@@ -137,8 +137,8 @@ export default function Hero() {
             variants={item}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
           >
-            <a href="#work" id="hero-view-work-btn" className="btn-primary w-full sm:w-auto justify-center">
-              View My Work
+            <a href="#projects" id="hero-view-work-btn" className="btn-primary w-full sm:w-auto justify-center">
+              View My Projects
               <ArrowDown size={16} />
             </a>
             <a
@@ -156,7 +156,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Social Links */}
-          <motion.div variants={item} className="flex items-center justify-center gap-4 mb-16">
+          <motion.div variants={item} className="flex items-center justify-center gap-4 mb-12">
             {socials.map((social) => {
               const Icon = social.icon;
               return (
@@ -186,7 +186,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-              className="w-px h-8 bg-gradient-to-b from-indigo-500 to-transparent"
+              className="w-px h-8 bg-gradient-to-b from-[#14B8A6] to-transparent"
             />
           </motion.div>
         </motion.div>
